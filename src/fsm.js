@@ -81,7 +81,7 @@ class FSM {
      * @returns {Array}
      */
     getStates(event) {
-        var arr = [], newArr = [], num = '';
+        var arr = [], newArr = [], str = '';
 
         for (var key in this.config.states) {
             arr.push(key);
@@ -92,9 +92,9 @@ class FSM {
         }
 
         for (var i = 0; i < arr.length ; i++) {
-            num = arr[i];
-            if (this.config.states[num].transitions[event]) {
-                newArr.push(num);
+            str = arr[i];
+            if (this.config.states[str].transitions[event]) {
+                newArr.push(str);
             } else {
                 newArr.push();
             }
